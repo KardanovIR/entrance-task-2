@@ -1,0 +1,75 @@
+.layout {
+    position: relative;
+    min-height: 100%;
+    min-width: 300px;
+    min-width: 30rem;
+}
+
+.layout-inner {
+    padding: 0 0 8rem;
+}
+
+.grid {
+    margin: 42px auto 0;
+    margin: 4.2rem auto 0;
+    padding: 0 44px;
+    padding: 0 4.4rem;
+    max-width: 1088px;
+    max-width: 108.8rem;
+    width: 100%;
+    overflow: hidden;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.grid-cell{
+    display: inline-block;
+    width: 50%;
+    margin-left: 11%;
+    margin-bottom: 42px;
+    margin-bottom: 4.2rem;
+    margin-top: 42px;
+    margin-top: 4.2rem;
+    vertical-align: top;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.add-title {
+    font-size: 20px;
+    color: #000000;
+    letter-spacing: 0;
+    font-weight: 700;
+}
+
+
+.fl_grid_wrap {
+    display: flex;
+    width: 100%;
+}
+
+.form_control {
+    display: flex;
+    flex-direction: column;
+}
+
+.fl_grid_cell {
+    max-width: 50%;
+    width: 100%;
+    margin: 0 40px;
+}
+
+
+
+.fl_grid_wrap.--fl_grid_row_only {
+    flex-direction: row;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .fl_grid_wrap {
+        flex-direction: column;
+    }
+}
