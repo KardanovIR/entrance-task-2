@@ -19,4 +19,7 @@ $(document).ready(() => {
 	$('.show-event-added').on('click', function () {
 		new Modal('#event-added');
 	});
+	
+	
+	
 });
