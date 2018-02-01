@@ -4,6 +4,10 @@ const path = require('path');
 const webpack = require('webpack');
 const autoprefixer = require('autoprefixer');
 
+function _path(p) {
+	return path.join(__dirname, p);
+}
+
 
 module.exports = {
 	context: path.join(__dirname, 'src'),
@@ -53,9 +57,19 @@ module.exports = {
 			}
 		]
 	},
+	resolve: {
+		alias: {
+			'jquery': _path('node_modules/jquery/dist/jquery'),
+			'inputmask.dependencyLib': _path('node_modules/jquery.inputmask/dist/inputmask/inputmask.dependencyLib'),
+			'inputmask' : _path('node_modules/jquery.inputmask/dist/inputmask/inputmask'),
+			'jquery.inputmask': _path('node_modules/jquery.inputmask/dist/inputmask/jquery.inputmask'),
+			'inputmask.date.extensions': _path('node_modules/jquery.inputmask/dist/inputmask/inputmask.date.extensions')
+		},
+	},
+	
 	devtool: 'source-map',
 	devServer: {
-		contentBase: path.join(__dirname, "dist"),
+		contentBase: __dirname,
 		port: 8080,
 		historyApiFallback: true
 	}

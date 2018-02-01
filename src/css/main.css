@@ -23,6 +23,25 @@ main {
     overflow: hidden;
 }
 
+
+input {
+    background: #FFFFFF;
+    border: 2px solid #E9ECEF;
+    border-radius: 4px;
+    font-size: 15px;
+    color: #000000;
+    letter-spacing: 0;
+    padding-left: 10px;
+    height: 32px;
+}
+
+input:hover,
+input:focus {
+    outline: none;
+    border: 2px solid #007DFF;
+}
+
+
 ::-webkit-scrollbar-thumb {
     min-height: 20px;
     border: solid transparent;
@@ -59,8 +78,8 @@ main {
     color: #000;
     box-shadow: 0 -1px 0 0 #E9ECEF;
 
-    max-width: 100%;
-    width: calc(100% - 40px);
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .app-header-left-container {
@@ -234,7 +253,13 @@ main {
     padding-right: 16px;
     padding-left: 16px;
     padding-bottom: 32px;
-    text-align: center;
+    text-align: right;
+}
+
+.modal-button-container {
+    text-align: right;
+    display: inline-block;
+    position: relative;
 }
 
 @-webkit-keyframes modalAnimation {
@@ -380,5 +405,9 @@ main {
         position: absolute;
         left: 0;
         bottom: 4px;
+    }
+
+    input {
+        height: 38px;
     }
 }

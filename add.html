@@ -1,8 +1,6 @@
 <!doctype html>
 <html lang="ru">
 <head>
-  <link rel="stylesheet" type="text/css" href="src/css/add.css"/>
-  <link rel="stylesheet" type="text/css" href="src/css/main.css"/>
   <title>Яндекс.Переговорки</title>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,59 +21,106 @@
 </header>
 <main>
   <div class="layout">
-    <div class="layout-inner"></div>
-  </div>
-  <div class="add-title">
-    Редактирование встречи
-    <span class="icon-button icon-close"></span>
-  </div>
-  <div>
-    <div class="fl_grid_wrap">
-      <div class="fl_grid_cell">
-        <div class="form_control">
-          <label>Тема</label>
-          <input>
-        </div>
-      </div>
-      <div class="fl_grid_cell ">
-        <div class="fl_grid_cell">
-          <div class="form_control">
-            <label>Дата</label>
-            <input>
-          </div>
-        </div>
-        <div class="fl_grid_wrap --fl_grid_row_only">
-          <div class="form_control">
-            <label>Начало</label>
-            <input>
-          </div>
-          <div class="form_control">
-            <label>Конец</label>
-            <input>
-          </div>
-        </div>
-
-      </div>
-    </div>
-    <div class="fl_grid_wrap">
-      <div class="fl_grid_cell">
-        <div class="form_control">
-          <label>Тема</label>
-          <input>
-        </div>
-      </div>
+    <div class="add-title --substrate">
+      Редактирование встречи
+      <span class="close-button icon-button icon-close"></span>
     </div>
 
+    <div class="flex-grid --m-direction-column --substrate">
+      <div class="flex-cell">
+        <div class="form-control">
+          <label class="form-label">
+            <span>Тема</span>
+          </label>
+          <input class="form-input">
+        </div>
+      </div>
+      <div class="flex-cell">
+        <div class="flex-grid --m-direction-column">
+          <div class="flex-cell">
+            <div class="form-control --m-padding-bottom-8">
+              <label class="form-label">
+                <span>Дата</span>
+              </label>
+              <input class="form-input" type="date">
+            </div>
+          </div>
+          <div class="flex-cell">
+            <div class="flex-grid">
+              <div class="flex-cell">
+                <div class="form-control --d-padding-0 --m-padding-bottom-0">
+                  <label class="form-label --m-prune">
+                    <span>Начало</span>
+                  </label>
+                  <input class="form-input time-input" placeholder="12:00">
+                </div>
+              </div>
+              <div class="flex-cell repulser">
+                <span>—</span>
+              </div>
+              <div class="flex-cell">
+                <div class="form-control --d-padding-0 --m-padding-bottom-0">
+                  <label class="form-label --m-prune">
+                    <span>Конец</span>
+                  </label>
+                  <input class="form-input time-input" placeholder="13:00">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex-grid --m-direction-column">
+      <div class="flex-cell --m-margin-top-8">
+        <div class="form-control --m-padding-top-16 --substrate">
+          <label class="form-label">
+            <span>Участники</span>
+          </label>
+          <input class="form-input">
+        </div>
+        <div class="form-chosen-wrapper">
+
+        </div>
+      </div>
+      <div class="flex-cell">
+        <div class="rooms-wrapper --substrate">
+          <label class="form-label">
+            <span>Рекомендованные переговорки</span>
+          </label>
+          <div class="room --active">
+            <b class="room-times">16:00—16:30</b>
+            <span class="room-name">Готем · 4 этаж</span>
+          </div>
+          <div class="room">
+            <b class="room-times">16:00—16:30</b>
+            <span class="room-name">Готем · 4 этаж</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer button-container --substrate">
+      <a href="#" class="footer-button button button-gray">Отмена</a>
+      <a href="#" class="footer-button --footer-delete-button button button-gray">Удалить встречу</a>
+      <a href="#" class="footer-button button button-gray show-event-added">Сохранить</a>
+    </div>
   </div>
 </main>
 
-<footer>
-
-  <div class="button-container">
-    <a href="#" class="button button-gray">Отмена</a>
-    <a href="#" class="button button-gray">Удалить встречу</a>
-    <a href="#" class="button button-gray">Сохранить</a>
+<div class="modal-overlay">
+  <div class="modal" role="dialog" aria-modal="true" id="event-added">
+    <div class="modal-icon icon-success"></div>
+    <div class="modal-title">Встреча создана!</div>
+    <div class="modal-text">14 декабря, 15:00 - 17:00</div>
+    <div class="modal-footer">
+      <div class="modal-button-container">
+        <a href="#" class="button button-default">Хорошо</a>
+      </div>
+    </div>
   </div>
-</footer>
+</div>
+
 </body>
 </html>
