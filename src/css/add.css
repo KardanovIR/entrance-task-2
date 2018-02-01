@@ -202,4 +202,12 @@
     .footer-button {
         margin-top: 17px;
     }
+
+    .show-event-added {
+        margin-right: 16px;
+    }
+
+    .repulser {
+        padding-top: 10px;
+    }
 }
