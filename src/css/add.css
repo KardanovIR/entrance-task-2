@@ -83,7 +83,6 @@
 
 .room {
     display: flex;
-    width: 100%;
     padding: 10px;
     background: #e9ecef;
     border-radius: 4px;
@@ -194,5 +193,13 @@
 
     .--m-padding-bottom-8 {
         padding-bottom: 8px
+    }
+
+    .form-control {
+        padding-right: 32px;
+    }
+
+    .footer-button {
+        margin-top: 17px;
     }
 }
